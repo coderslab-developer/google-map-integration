@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<title></title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" type="image/png" href="favicon.ico" />
+
+		<!-- css -->
+		<link rel="stylesheet" type="text/css" th:href="@{/map/css/bootstrap.css}" />
+		<link rel="stylesheet" type="text/css" th:href="@{/map/css/map.css}" />
+		<link rel="stylesheet" type="text/css" th:href="@{/map/css/style.css}" />
+
+		<!-- js -->
+		<script th:src="@{/map/js/jquery-3.2.1.min.js}"></script>
+		<script th:src="@{/map/js/bootstrap.js}"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJwDIbC8J7bn318YwbeOvWUt7NQor-08E"></script>
+		<script type="text/javascript" th:src="@{/map/js/map.js}"></script>
+	</head>
+
+	<body onload="m4.nc.sj.initMap(), m4.nc.sj.queryFunction()">
+		<div class="menu">
+			<nav class="navbar navbar-inverse">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" th:href="@{/}">Coderslab</a>
+					</div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+						<ul class="nav navbar-nav">
+							<li class="active">
+								<a th:href="@{/}">Home</a>
+							</li>
+							<li>
+								<a href="#">Page 2</a>
+							</li>
+							<li>
+								<a href="#">Page 3</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<div id="map"></div>
+		<a id="imageUrl" th:href="@{/map/img/}"></a>
+	</body>
+
+</html>
