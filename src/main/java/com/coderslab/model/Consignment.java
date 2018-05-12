@@ -13,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 import lombok.Data;
 
@@ -57,4 +58,13 @@ public class Consignment {
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "createDate", nullable = false)
 	private Date createDate;
+
+	@Transient
+	private Address collectionAddress;
+
+	@Transient
+	private Address deliveryAddress;
+
+	@Transient
+	private User driver;
 }

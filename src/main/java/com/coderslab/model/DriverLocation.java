@@ -13,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 import lombok.Data;
 
@@ -29,8 +30,8 @@ public class DriverLocation {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 
-	@Column(name = "driverName", length = 100)
-	private String driverName;
+	@Column(name = "locationName", length = 100)
+	private String locationName;
 
 	@Column(name = "driverId")
 	private Integer driverId;
@@ -45,4 +46,6 @@ public class DriverLocation {
 	@Column(name = "locationTime", nullable = false)
 	private Date locationTime;
 
+	@Transient
+	private User driver;
 }
