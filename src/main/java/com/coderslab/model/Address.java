@@ -29,6 +29,9 @@ public class Address {
 	@Column(name = "company", length = 200)
 	private String company;
 
+	@Column(name = "country", length = 200)
+	private String country;
+
 	@Column(name = "city", length = 200)
 	private String city;
 
